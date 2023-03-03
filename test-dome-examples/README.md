@@ -1,0 +1,1 @@
+TestDome excerscises I did when applied to Modus OÜ. I tooked C# .NET Exercises and React. Got into 30% of top candidates
