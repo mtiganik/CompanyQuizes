@@ -1,17 +1,17 @@
 function sockMerchant(n, ar) {
-    // Write your code here
+    const countObj = {}
+    ar.forEach(function(i){countObj[i] = (countObj[i]||0) +1;})
 
+    return Object.values(countObj)
+    .map((i) => Math.floor(i/2))
+    .reduce((partialSum,a) => partialSum + a, 0)
 }
 
 
 n = 9
 ar = [10,20,20,10,10,30,50,10,20]
+console.log(sockMerchant(n,ar))
 
-
-const countObj = {}
-ar.forEach(function(i){countObj[i] = (countObj[i]||0) +1;})
-const sum = Object.values(countObj).map((n) => Math.floor(n / 2));
-const sum2 = Object.values(countObj).reduce((acc,n) => Math.floor(acc/2)+n,n)
-console.log(sum2)
-// const keys = Object.keys(countObj)
-// console.log(keys)
+n= 10
+ar = [1,1,3,1,2,1,3,3,3,3]
+console.log(sockMerchant(n,ar))
