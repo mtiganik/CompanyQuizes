@@ -23,6 +23,16 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+
+            //TextBox txtbox = new TextBox();
+            //txtbox.Text = "textbox1";
+            //this.stackpanel.Children.Add(txtbox);
+
+            //ComboBox cmb = new ComboBox();
+            //cmb.Items.Add("item 1");
+            //cmb.Items.Add("item 2");
+            //this.stackpanel.Children.Add(cmb);
+
         }
     }
 }
