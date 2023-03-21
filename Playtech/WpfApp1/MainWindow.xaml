@@ -18,6 +18,9 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
+        <Button local:CornerRadiusSetter.CornerRadius="10">Button</Button>
+        <TextBox local:CornerRadiusSetter.CornerRadius="3,0,0,3" />
+
         <Polygon  Grid.Row="1" Grid.Column="0" Points="100,0 0,0 0,100" Stroke="White" StrokeThickness="4"  Fill="Yellow" RenderTransformOrigin="0.5,0.5" >
             <Polygon.RenderTransform>
                 <TransformGroup>
@@ -28,7 +31,7 @@
                 </TransformGroup>
             </Polygon.RenderTransform>
         </Polygon>
-        <!--<StackPanel Name="stackpanel" Grid.Row="1" Grid.Column="1" />-->
+        <Grid Name="dynamicGrid" Grid.Row="1" Grid.Column="1" />
         <Grid Grid.Row="1" Grid.Column="2" Margin="8,0,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
