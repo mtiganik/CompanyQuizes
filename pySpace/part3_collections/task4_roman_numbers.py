@@ -1,5 +1,4 @@
 def roman(number):
-    if number > 4999: return 0 
     letters,i,res = "IVXLCDM",0,""
     while number != 0:
         if i == 6: return "M"*number + res
@@ -28,8 +27,5 @@ assert roman(1776) == "MDCCLXXVI"
 assert roman(1918) == "MCMXVIII"
 assert roman(1944) == "MCMXLIV"
 assert roman(2023) == "MMXXIII"
-print(roman(3999))
-print(roman(4999))
-# assert roman(2023) == "MMXXIII"
+assert roman(2023) == "MMXXIII"
 
-print("End of program")
