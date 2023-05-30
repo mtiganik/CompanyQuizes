@@ -10,72 +10,61 @@ def sort_footy(teams):
     
     #res = sorted(teams.items(), key=lambda x:
     # ( (1000-x[1]['wins']),x[1]['games_played'], x[1]['name']) )
-    # x = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
-    res= {k: v for k, v in sorted(teams.items(), key=lambda x: 
-                                  ( (1000-x[1]['wins']),x[1]['games_played'], x[1]['name']))}
-     
-    #print(type(res[1]))
-    return res
 
-def sortFn(x):
-    print(x)
-    return 0
-teams1 ={
-    "1ccc" : {
-        "name":"ccc",
-        "wins": 15,
-        "games_played":20
-    },
-    "2aaa" : {
-        "name":"aaa",
-        "wins": 15,
-        "games_played":30
+    # res= {k: v for k, v in sorted(teams.items(), key=lambda x: 
+    #                               ( (1000-x[1]['wins']),x[1]['games_played'], x[1]['name']))}
+    
+    res= dict(sorted(teams.items(), key=lambda x:
+                 ( (1000-x[1]['wins']),x[1]['games_played'], x[1]['name'])))
+    list = []
+    for k in res.items(): list.append(k[1])
+    # res = list(res.items())
+    return list
 
-    },
-    "3bbb": {
-        "name":"bbb",
-        "wins": 2,
-        "games_played":6
-
-    }
-}
 teams = {
     'Arsenal FC': {
         'name': 'Arsenal FC',
         'wins': 4,
         'games_played': 62,
+        'wins_against_teams': {
+            'Chelsea FC': 1,
+            'Madrid Real': 2,
+            'Barcelona FC': 1
+        }
     },
     'Chelsea FC': {
         'name': 'Chelsea FC',
         'wins': 6,
         'games_played': 16,
+        'wins_against_teams': {
+            'Arsenal FC': 4,
+            'Madrid Real': 0,
+            'Barcelona FC': 2
+        }
     },
     'Madrid Real': {
         'name': 'Madrid Real',
         'wins': 3,
         'games_played': 118,
+        'wins_against_teams': {
+            'Arsenal FC': 0,
+            'Chelsea FC': 3,
+            'Barcelona FC': 0
+        }
     },
     'Barcelona FC': {
         'name': 'Barcelona FC',
         'wins': 4,
         'games_played': 81,
+        'wins_against_teams': {
+            'Arsenal FC': 0,
+            'Madrid Real': 0,
+            'Chelsea FC': 4
+        }
     }
 }
-sort_footy(teams1)
 
 
+sort_footy(teams)
 
-# test_dict = {'Nikhil' : { 'roll' : 24, 'marks' : 17},
-#              'Akshat' : {'roll' : 54, 'marks' : 12},
-#              'Akash' : { 'roll' : 12, 'marks' : 15}}
- 
-# # printing original dict
-# print("The original dictionary : " + str(test_dict))
- 
-# # using OrderedDict() + sorted()
-# # Sort nested dictionary by key
-# res = OrderedDict(sorted(test_dict.items(),
-#        key = lambda x: getitem(x[1], 'marks')))
- 
-# # print result
-# print("The sorted dictionary by marks is : " + str(res))
+
