@@ -89,7 +89,6 @@ cards = [
     {'suit': 'hearts', 'value': 13},
     {'suit': 'diamonds', 'value': 6},
     {'suit': 'clubs', 'value': 6},
-    {'suit': 'spades', 'value': 13},
     {'suit': 'spades', 'value': 6},
     {'suit': 'spades', 'value': 3},
 ]
