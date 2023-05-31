@@ -1,16 +1,15 @@
 #text starting, text middle, text ending
 ts,tm,te = "starting","middle","ending"
+
 def hanoi(N):
-    s = [i for i in range(N,0,-1)]
-    m = []
-    e = []
+    s,m,e = [i for i in range(N,0,-1)],[],[]
     i = 0
     retStr = ""
     while(True):
         i += 1
         retStr = retStr + f"{i}. " + moveSmallest(s,m,e, N%2==0)
         if i == 2**N -1: 
-            return retStr
+            return retStr.strip()
         i += 1
         retStr = retStr + f"{i}. " + MoveOtherThanSmallest(s,m,e)
 
@@ -25,6 +24,7 @@ def switch(first, second, txtFirst, txtSecond):
 def MoveOtherThanSmallest(s,m,e):
     return switch(m,e,tm,te) if 1 in s \
 else switch(s,e,ts,te) if 1 in m else switch(s,m,ts,tm)
+
 def MoveFirstToSecond(first, second, txtFirst, txtSecond):
     second.append(first[-1])
     first.pop()
@@ -35,7 +35,7 @@ def MoveSecondToFirst(first, second, txtFirst, txtSecond):
     second.pop()
     return f"Move disk from {txtSecond} pole to {txtFirst} pole.\n"
 
-def getWhereSmallestIsAndWhereToGo(s,m,e,isEven):
+def moveSmallest(s,m,e, isEven):
     itIsNow, whereToGo, txtNow,txtToGo =0,0,0,0
     if 1 in s:
         itIsNow, txtNow = s, ts
@@ -46,15 +46,6 @@ def getWhereSmallestIsAndWhereToGo(s,m,e,isEven):
     else:
         itIsNow,txtNow = e, te
         (whereToGo, txtToGo) = (s,ts) if isEven == True else (m,tm)
-    return [itIsNow,whereToGo,txtNow,txtToGo]
+    return MoveFirstToSecond(itIsNow,whereToGo,txtNow,txtToGo)
 
-def moveSmallest(s,m,e, isEven):
-    args = getWhereSmallestIsAndWhereToGo(s,m,e,isEven)
-    return swapSmall(args[0],args[1],args[2],args[3])
-
-def swapSmall(start,end,txtStart,txtEnd):
-    end.append(start[-1])
-    start.pop()
-    return f"Move disk from {txtStart} pole to {txtEnd} pole.\n"
-
-print(hanoi(5))
+print(hanoi(3))
