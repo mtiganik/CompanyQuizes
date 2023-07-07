@@ -48,7 +48,7 @@ def makeListFromDict(dic):
     return res
 
 def getEqData(eq):
-    chars = 'abcdefghijklmnopqrstuvwxyz' #all chars
+    chars = 'abcdefghijklmnopqrstuvwxyz' #all chars in list
     (eq,endVal)=(eq.split("="))
     dict = []
     for x in chars:
