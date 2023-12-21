@@ -62,14 +62,14 @@ def getEqData(eq):
                 raise ValueError("Non alphabetical order not implemented. Please place your variables in alphabetical order")
     dict.append({"=":float(endVal)})
     return dict
-
-# solve("a+b+2c-7d=18","-5a+5b+7c-3d=-54","9a-5b-3c+9d=44","3a-3b-2c-6d=47") #want to know answer
-# solve("2x+3y=6","4x+9y=15") #x=1,5 y=1
-# solve("2e+3f=1", "0e+f=-1") # variable is 0 in one eq 
-# solve("0.1k-0.7m=-1.1","0.5k+0.2m=1.8") #k=-4,m=1
-# solve("-4x+3y-2z=-7","-8x-3y+4z=-5","16x-3y-5z=19") #x=1,y=-1,z=0
-# solve("2v+w+x+y+z=4","v+2w+x+y+z=5","v+w+2x+y+z=6","v+w+x+2y+z=7","v+w+x+y+2z=8")
-# solve("2a+2b-c+d=4","4a+3b-c+2d=6","8a+5b-3c+4d=12","3a+3b-2c+2d=6")
-# solve("-4a-6b+8c+7d=-21","-9a-3b-4c+d=82","-9a-b+4c-10d=111","3a-b+2c+0d=-29")
-# solve("7a+8b+9c+2d=-69","-5a+b+c+9d=-38","-8a+6b-4c-8d=74","9a-4b-9c+7d=-135")
+print("Hello")
+solve("a+b+2c-7d=18","-5a+5b+7c-3d=-54","9a-5b-3c+9d=44","3a-3b-2c-6d=47") #want to know answer
+solve("2x+3y=6","4x+9y=15") #x=1,5 y=1
+solve("2e+3f=1", "0e+f=-1") # variable is 0 in one eq 
+solve("0.1k-0.7m=-1.1","0.5k+0.2m=1.8") #k=-4,m=1
+solve("-4x+3y-2z=-7","-8x-3y+4z=-5","16x-3y-5z=19") #x=1,y=-1,z=0
+solve("2v+w+x+y+z=4","v+2w+x+y+z=5","v+w+2x+y+z=6","v+w+x+2y+z=7","v+w+x+y+2z=8")
+solve("2a+2b-c+d=4","4a+3b-c+2d=6","8a+5b-3c+4d=12","3a+3b-2c+2d=6")
+solve("-4a-6b+8c+7d=-21","-9a-3b-4c+d=82","-9a-b+4c-10d=111","3a-b+2c+0d=-29")
+solve("7a+8b+9c+2d=-69","-5a+b+c+9d=-38","-8a+6b-4c-8d=74","9a-4b-9c+7d=-135")
  

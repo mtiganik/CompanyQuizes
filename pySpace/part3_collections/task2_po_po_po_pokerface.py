@@ -83,14 +83,15 @@ def pokervalue(cards):
 
 
 
-
+# sama kaarti võib mitu korda olla. 
 cards = [
-    {'suit': 'clubs', 'value': 13},
-    {'suit': 'hearts', 'value': 13},
-    {'suit': 'diamonds', 'value': 6},
+    {'suit': 'clubs', 'value': 9},
+    {'suit': 'hearts', 'value': 11},
+    {'suit': 'diamonds', 'value': 11},
     {'suit': 'clubs', 'value': 6},
-    {'suit': 'spades', 'value': 6},
-    {'suit': 'spades', 'value': 3},
+    {'suit': 'spades', 'value': 2},
+    {'suit': 'spades', 'value': 2},
+    {'suit': 'spades', 'value': 2},
 ]
 
 print(pokervalue(cards))

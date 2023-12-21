@@ -1,4 +1,4 @@
-import ImageGallery from './ex2-1'
+import ImageGallery from './ex2-1.js'
 import Table from './ex3.js'
 function App() {
   return (
